@@ -17,60 +17,7 @@ body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-}
-
-
-
-
-
-/*Loader*/
-.loader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  animation-name: loader;
-  animation-duration: 2.5s;
-  z-index: 100;
-}
-
-@keyframes loader {
-  0% {
-    visibility: visible;
-    background-color: white;
-  }
-  
-  90% {
-    visibility: visible;
-    background-color: white;
-  }
-  
-  100% {
-    visibility: hidden;
-    background-color: transparent;
-  }
-}
-
-/*Object 1*/
-.loader .object1 {
-  position: fixed;
-  width: 10vw;
-  height: 10vw;
-  visibility: hidden;
-  background-image: linear-gradient(#7d38d8, #0d777c);
-  animation-name: object1;
-  animation-duration: 2.5s;
-}
-
-@keyframes object1 {
-  0% {
-    left: 50%;
-  }
-  
-  100% {
-    visibility: hidden;
-    left: 25%;
-  }
+  background-color: black;
 }
 
 
@@ -85,31 +32,31 @@ body {
   width: 100%;
   height: auto;
   background-color: rgba(0,0,0,0.1);
-  z-index: 2;
+  z-index: 3;
 }
 
-.nav a {
+.nav .links a {
   position: relative;
-  padding: 1.5vw 3vw;
+  padding: 1vw 2vw;
   float: right;
-  font-size: 1vw;
+  font-size: 0.7vw;
   color: white;
   text-decoration: none;
   font-family: 'Quicksand', bgBold, Helvetica, Arial;
 }
 
-.nav a:hover {
+.nav .links a:hover {
   background-color: rgba(26,197,206,0.3);
 }
 
-.nav a:active {
+.nav .links a:active {
   background-color: rgba(26,197,206,0.4);
   color: #ab94b2;
 }
 
 .nav .title {
-  position: relative;
-  padding: 0.8vw 3vw;
+  position: fixed;
+  padding: 0.2vw 1.5vw;
   float: left;
   font-size: 2.2vw;
   color: white;
@@ -132,6 +79,192 @@ body {
 
 
 
+/*Icons*/
+.nav .icons a i {
+  position: relative;
+  padding: 0.85vw 1vw;
+  float: right;
+  color: gray;
+  cursor: pointer;
+}
+
+.nav .icons a i:hover {
+  color: white;
+}
+
+.nav .icons a i:active {
+  color: gray;
+}
+
+
+
+
+
+/*Panel*/
+.panel {
+  position: absolute;
+  width: 20%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  background-image: url("../images/panelBackground.jpg");
+  background-size: cover;
+  text-align: center;
+}
+
+.panel a {
+  position: relative;
+  cursor: pointer;
+  font-size: 2vw;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+  color: white;
+}
+
+
+
+
+
+/*Signup*/
+.signup {
+  position: absolute;
+  width: 60%;
+  height: 80%;
+  top: 10%;
+  left: 30%;
+  background-color: #a6a6a6;
+  text-align: center;
+  visibility: visible;
+}
+
+.signup h1 {
+  position: relative;
+  color: black;
+  font-size: 2vw;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+}
+
+.signup form {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.signup form input {
+  margin-bottom: 1vw;
+  width: 24vw;
+  height: 2vw;
+  border-style: none;
+  border-bottom: solid 0.15vw black;
+  background-color: transparent;
+  font-size: 1vw;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+}
+
+.signup form input:focus {
+  border-bottom: solid 0.15vw #0D777C;
+}
+
+.signup form button {
+  position: relative;
+  border: solid 0.5vw #1ac5ce;
+  border-radius: 1vw;
+  background-color: #1ac5ce;
+  color: white;
+  font-size: 1vw;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+  cursor: pointer;
+}
+
+
+
+
+/*Login*/
+.login {
+  position: absolute;
+  width: 60%;
+  height: 80%;
+  top: 10%;
+  left: 30%;
+  background-color: #a6a6a6;
+  text-align: center;
+  visibility: hidden;
+}
+
+.login h1 {
+  position: relative;
+  color: black;
+  font-size: 2vw;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+}
+
+.login form {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.login form input {
+  margin-bottom: 1vw;
+  width: 24vw;
+  height: 2vw;
+  border-style: none;
+  border-bottom: solid 0.15vw black;
+  background-color: transparent;
+  font-size: 1vw;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+}
+
+.login form input:focus {
+  border-bottom: solid 0.15vw #0D777C;
+}
+
+.login form button {
+  position: relative;
+  border: solid 0.5vw #1ac5ce;
+  border-radius: 1vw;
+  background-color: #1ac5ce;
+  color: white;
+  font-size: 1vw;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+  cursor: pointer;
+}
+
+
+
+
+
+/*Logout*/
+.logout {
+  position: absolute;
+  margin-top: 2.8%;
+  right: 2.2%;
+  background-color: #262626;
+  border: solid 1vw #262626;
+  border-radius: 0 0 1vw 1vw;
+  visibility: hidden;
+}
+
+.logout form button {
+  border: solid 0.5vw white;
+  border-radius: 1vw;
+  background-color: white;
+  cursor: pointer;
+  font-size: 0.7vw;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+}
+
+
+
+
+
+/*Responsive Navigation*/
+.res-nav {
+  position: fixed;
+  visibility: hidden;
+}
+
+
+
 
 
 /*Section 1*/
@@ -150,7 +283,7 @@ body {
 
 /*Column 1*/
 .section1 .column1 {
-  position: fixed;
+  position: absolute;
   width: 50%;
   height: 100%;
   background-color: rgba(0,0,0,0.3);
@@ -201,15 +334,15 @@ body {
 
 /*Column 2*/
 .section1 .column2 {
-  position: fixed;
+  position: absolute;
   width: 50%;
   height: 100%;
   left: 50%;
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.075);
 }
 
 .section1 .column2:hover {
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255,255,255,0.1);
 }
 
 /*Heading*/
@@ -260,10 +393,57 @@ body {
   width: 100%;
   height: 95%;
   margin: 0;
+}
+
+
+
+/*Carousel*/
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 1vw;
+}
+
+.carousel .img1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   background-image: url("../images/background2.jpg");
   background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat;
+  animation-name: img1;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes img1 {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.carousel .img2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-image: url("../images/background3.jpg");
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 
@@ -283,17 +463,9 @@ body {
   position: absolute;
   width: 220%;
   height: 20%;
+  top: -2%;
   left: -2%;
-  background-color: #0d777c;
-  transform: rotate(2deg);
-}
-
-.section2 .slant2 {
-  position: absolute;
-  width: 220%;
-  height: 20%;
-  left: -2%;
-  background-color: black;
+  background-color: #0d0d0d;
   transform: rotate(2deg);
 }
 
@@ -328,16 +500,16 @@ body {
 
 
 /*Footer*/
-.footer {
+.index-footer {
   position: relative;
   height: 10%;
   width: 100%;
-  background-color: black;
+  background-color: #0d0d0d;
 }
 
 
 
-.footer p {
+.index-footer p {
   position: absolute;
   margin-left: 1%;
   color: white;
@@ -346,7 +518,7 @@ body {
   font-size: 1.3vw;
 }
 
-.footer h1 {
+.index-footer h1 {
   position: absolute;
   margin-top: 3%;
   margin-left: 1%;
@@ -357,10 +529,560 @@ body {
 }
 
 
-
-.footer img {
+.index-footer img {
   position: absolute;
   width: 5vw;
   height: auto;
   float: right;
+}
+
+
+
+
+
+/*build.php*/
+
+/*Coming Soon*/
+.comingSoon {
+  position: absolute;
+  margin: 10%;
+  width: 80%;
+  height: 70%;
+  background-color: white;
+  box-shadow: 0 0 0.8vw 0.8vw black inset;
+  text-align: center;
+}
+
+.comingSoon h1 {
+  position: relative;
+  font-size: 3vw;
+  font-family: 'Quicksand', Helvetica, bgBold;
+}
+
+.comingSoon p {
+  position: relative;
+  font-size: 2vw;
+  font-family: 'Quicksand', Helvetica, bgBold;
+}
+
+.comingSoon img {
+  position: relative;
+  width: 25vw;
+  height: auto;
+  top: 10%;
+}
+
+
+
+
+
+/*game-ready.php*/
+
+/*Sub Navigation*/
+.sub-nav {
+  position: absolute;
+  width: 100%;
+  height: 13vw;
+  top: 2.7vw;
+  text-align: center;
+  background-color: #0d0d0d;
+  z-index: 2;
+}
+
+.sub-nav h1 {
+  position: relative;
+  color: #1ac5ce;
+  font-family: 'Quicksand', Helvetica, bgBold;
+}
+
+.sub-nav p {
+  position: relative;
+  color: white;
+  font-family: 'Quicksand', Helvetica, bgBold;
+}
+
+.sub-nav .nav-icons {
+  position: absolute;
+  width: 100%;
+  height: 5.5vw;
+  background-color: rgba(13,13,13,0.9);
+  text-align: center;
+}
+
+.sub-nav .nav-icons a {
+  position: relative;
+  top: 1.5vw;
+  padding: 3vw;
+  cursor: default;
+}
+
+.sub-nav .nav-icons a img {
+  width: auto;
+  height: 2.4vw;
+  cursor: pointer;
+}
+
+/*Sticky*/
+.sub-nav .sticky {
+  position: fixed;
+  width: 100%;
+  top: 2.5vw;
+  height: 6.8vw;
+  background-color: rgba(13,13,13,0.9);
+  text-align: center;
+}
+
+.sub-nav .sticky a {
+  position: relative;
+  top: 2.5vw;
+  padding: 3vw;
+  cursor: default;
+}
+
+.sub-nav .sticky a img {
+  width: auto;
+  height: 2.4vw;
+  cursor: pointer;
+}
+
+
+
+
+
+/*Featured*/
+.featured {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  top: 14vw;
+  background-size: cover;
+  background-image: url("../images/featured1.jpg");
+  border-bottom: 2vw solid black;
+  z-index: 1;
+}
+
+
+
+
+
+/*Content*/
+.content {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+  top: 30%;
+  text-align: center;
+  left: 2.5%;
+}
+
+.content .container {
+  position: relative;
+  width: 20%;
+  height: 40%;
+  margin-right: 10%;
+  background-color: #262626;
+  display: inline-block;
+}
+
+.content .container .image {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content .container .footer {
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  background-color: #0D0D0D;
+  top: 75%;
+  left: 0;
+  text-align: center;
+}
+
+.content .container .footer h1 {
+  position: relative;
+  color: white;
+  font-size: 0.9vw;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+}
+
+.content .container .footer p {
+  position: relative;
+  margin: 0;
+  color: white;
+  font-size: 0.9vw;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+}
+
+.content .container form {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.content .container form input {
+  position: fixed;
+  visibility: hidden;
+}
+
+.content .container form button {
+  position: relative;
+  top: 10%;
+  background-color: white;
+  border: solid 0.3vw white;
+  border-radius: 1vw;
+  font-size: 0.8vw;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+  cursor: pointer;
+}
+
+.content .container form button:active {
+  background-color: #262626;
+  border-color: #262626;
+}
+
+
+
+
+
+/*League of Legends*/
+.lol {
+  position: relative;
+  width: 100%;
+  height: 120%;
+  top: 15vw;
+  background-color: black;
+}
+
+
+
+/*Header*/
+.lol .header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 11vw;
+  text-align: center;
+  background-image: url("../images/texture.jpg");
+  box-shadow: 0 0 0.8vw 0.8vw black inset;
+}
+
+.lol .header h1 {
+  color: white;
+  font-size: 3vw;
+  font-family: 'Quicksand', Helvetica, bgBold;
+}
+
+
+
+
+
+/*Overwatch*/
+.overwatch {
+  position: relative;
+  width: 100%;
+  height: 120%;
+  top: 25vw;
+  background-color: black;
+}
+
+.overwatch .header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 11vw;
+  text-align: center;
+  background-image: url("../images/texture.jpg");
+  box-shadow: 0 0 0.8vw 0.8vw black inset;
+}
+
+.overwatch .header h1 {
+  color: white;
+  font-size: 3vw;
+  font-family: 'Quicksand', Helvetica, bgBold;
+}
+
+
+
+
+
+/*PUBG*/
+.pubg {
+  position: relative;
+  width: 100%;
+  height: 120%;
+  top: 20vw;
+  background-color: black;
+}
+
+.pubg .header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 11vw;
+  text-align: center;
+  background-image: url("../images/texture.jpg");
+  box-shadow: 0 0 0.8vw 0.8vw black inset;
+}
+
+.pubg .header h1 {
+  color: white;
+  font-size: 3vw;
+  font-family: 'Quicksand', Helvetica, bgBold;
+}
+
+
+
+
+
+/*WoW*/
+.wow {
+  position: relative;
+  width: 100%;
+  height: 120%;
+  top: 15vw;
+  background-color: black;
+}
+
+.wow .header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 11vw;
+  text-align: center;
+  background-image: url("../images/texture.jpg");
+  box-shadow: 0 0 0.8vw 0.8vw black inset;
+}
+
+.wow .header h1 {
+  color: white;
+  font-size: 3vw;
+  font-family: 'Quicksand', Helvetica, bgBold;
+}
+
+
+
+
+
+/*Fortnite*/
+.fortnite {
+  position: relative;
+  width: 100%;
+  height: 120%;
+  top: 30vw;
+  background-color: black;
+}
+
+.fortnite .header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 11vw;
+  text-align: center;
+  background-image: url("../images/texture.jpg");
+  box-shadow: 0 0 0.8vw 0.8vw black inset;
+}
+
+.fortnite .header h1 {
+  color: white;
+  font-size: 3vw;
+  font-family: 'Quicksand', Helvetica, bgBold;
+}
+
+
+
+
+
+/*Battlerite*/
+.battlerite {
+  position: relative;
+  width: 100%;
+  height: 120%;
+  top: 25vw;
+  background-color: black;
+}
+
+.battlerite .header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 11vw;
+  text-align: center;
+  background-image: url("../images/texture.jpg");
+  box-shadow: 0 0 0.8vw 0.8vw black inset;
+}
+
+.battlerite .header h1 {
+  color: white;
+  font-size: 3vw;
+  font-family: 'Quicksand', Helvetica, bgBold;
+}
+
+
+
+.toTop {
+  position: fixed;
+  top: 90%;
+  right: 5%;
+  z-index: 4;
+}
+
+.toTop i {
+  position: absolute;
+  color: white;
+  font-size: 3vw;
+  cursor: pointer;
+}
+
+
+
+
+
+/*cart.php*/
+
+/*Shopping Cart*/
+.shopping-cart {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 15%;
+  padding-bottom: 10%;
+  text-align: center;
+}
+
+.shopping-cart h1 {
+  top: 20%;
+  color: white;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+  font-size: 3vw;
+}
+
+.shopping-cart .cart {
+  position: relative;
+  width: 75%;
+  height: auto;
+  top: 10%;
+  left: 12.5%;
+  background-color: white;
+}
+
+.shopping-cart .cart h2 {
+  position: relative;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+  font-size: 1.4vw;
+  margin-top: 10%;
+}
+
+.shopping-cart .cart form {
+  
+}
+
+.shopping-cart .cart img {
+  position: relative;
+  width: auto;
+  height: 10%;
+  top: 2%;
+  right: 5%;
+}
+
+.shopping-cart .cart form input {
+  position: relative;
+  width: 15%;
+  height: auto;
+  top: -20%;
+  padding: 2vw;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+  font-size: 1vw;
+  border-style: none;
+}
+
+.shopping-cart .cart button {
+  position: relative;
+  border: solid 0.5vw #bc0019;
+  border-radius: 1vw;
+  background-color: #bc0019;
+  color: white;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+  font-size: 0.8vw;
+  cursor: pointer;
+}
+
+.shopping-cart .cart p {
+  position: relative;
+  padding: 10vw;
+  color: black;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+  font-size: 1.5vw;
+}
+
+
+
+
+
+/*Checkout*/
+.checkout {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.8);
+  visibility: hidden;
+  z-index: 5;
+}
+
+.checkout form {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  background-color: white;
+  text-align: center;
+  visibility: hidden;
+  z-index: 6;
+}
+
+.checkout form a {
+  position: absolute;
+  right: 0;
+  padding: 1vw;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.checkout form h1 {
+  position: relative;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+  font-size: 1.5vw;
+}
+
+.checkout form h2 {
+  position: relative;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+  font-size: 1vw;
+}
+
+.checkout form input {
+  position: relative;
+  border-style: none;
+  border-bottom: solid 0.1vw black;
+  margin: 2%;
+}
+
+.checkout form button {
+  position: relative;
+  border: solid 0.5vw #bc0019;
+  border-radius: 1vw;
+  background-color: #bc0019;
+  color: white;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+  font-size: 0.8vw;
+  cursor: pointer;
 }

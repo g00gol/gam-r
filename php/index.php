@@ -1,3 +1,14 @@
+<!--Session Starter-->
+<?php
+
+session_start();
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 
 <html>
@@ -21,8 +32,8 @@
   <link href="https://fonts.googleapis.com/css?family=Share+Tech" rel="stylesheet">
 
   <!--CSS-->
-  <link rel="stylesheet" media="screen and (min-width: 1200px)" href="../css/styles.css">
-  <link rel="stylesheet" media="screen and (max-width: 1200px)" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <!--<link rel="stylesheet" media="screen and (max-width: 1200px)" href="../css/responsive.css">-->
 
   <!--JQuery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -35,7 +46,7 @@
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 
   <!--Font Awesome-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 </head>
 
@@ -43,37 +54,76 @@
 
 <body>
 
-  <!--Loader-->
-  <div class="loader">
-    
-    <!--Objects-->
-    <span class="object1">
-    </span>
-    
-    <span class="object2">
-    </span>
-    
-    <span class="object3">
-    </span>
-    
-    <span class="object4">
-    </span>
-    
-  </div>
-
-
-
-
-
   <!--Navigation-->
   <div class="nav" id="nav">
 
     <!--Title-->
-    <a href="#" class="title">GAM/r</a>
+    <a href="../php/index.php" class="title">GAM/r</a>
 
-    <a href="../php/game-ready.php">Game-Ready</a>
-    <a href="../php/build.php">Build Your Own</a>
-    <a class="current" href="../php/index.php">Home</a>
+
+  
+    <!--Icons-->
+    <div class="icons">
+
+      <a href="../php/cart.php"><i class="fas fa-shopping-cart fa-lg fa-fw" aria-hidden="true"></i></a>
+      
+      <?php
+        if (isset($_SESSION['username'])) {
+          echo '<a id="logout-icon" onclick="openLogout()"><i class="fas fa-user-circle fa-lg fa-fw" aria-hidden="true" style="color: green;"></i></a>';
+        }
+        
+        else {
+          echo '<a href="../php/account.php"><i class="fas fa-user-circle fa-lg fa-fw" aria-hidden="true"></i></a>';
+        }
+      ?>
+    
+      
+      
+      <!--Logout-->
+      <div class="logout" id="logout-tab">
+        
+        <form name="logout" action="../includes/logout.inc.php" method="post">
+          
+          <button type="submit" name="logout-submit">Logout</button>
+          
+        </form>
+        
+      </div>
+
+    </div>
+
+
+
+    <!--Links-->
+    <div class="links">
+
+      <a href="../php/game-ready.php">Game-Ready</a>
+      <a href="../php/build.php">Build Your Own</a>
+      <a class="current" href="../php/index.php">Home</a>
+
+    </div>
+
+  </div>
+    
+    
+    
+    
+
+  <!--Responsive Navigation-->
+  <div class="res-nav" id="res-nav">
+
+    <!--OpenNav-->
+    <a onclick="openNav()"><i class="fas fa-bars"></i></a>
+
+    <!--Nav Content-->
+    <div class="content">
+
+      <a class="current" href="../php/index.php">Home</a>
+      <a href="../php/build.php">Build Your Own</a>
+      <a href="../php/game-ready.php">Game-Ready</a>
+
+
+    </div>
 
   </div>
 
@@ -99,7 +149,7 @@
       <!--Button-->
       <div class="button">
 
-        <a href="#">Build Your Own</a>
+        <a href="../php/build.php">Create Now</a>
 
       </div>
 
@@ -120,7 +170,7 @@
       <!--Button-->
       <div class="button">
 
-        <a href="#">Shop Now</a>
+        <a href="../php/game-ready.php">Shop Now</a>
 
       </div>
 
@@ -134,6 +184,16 @@
 
   <!--Section 2-->
   <div class="section2" id="section2">
+
+    <!--Carousel-->
+    <div class="carousel">
+
+      <div class="img1"></div>
+      <div class="img2"></div>
+
+    </div>
+
+
 
     <!--Overlay-->
     <div class="overlay">
@@ -150,22 +210,13 @@
     <!--Motto-->
     <div class="motto">
 
-      <h1>Our goal as a GAM/r is to supply you with your most ideal and comfortable mouse for all your gaming and work needs. We offer clean, simple, yet sophisticated templates in which
+      <h1 data-aos="fade-up">Our goal as GAM/r is to supply you with your most ideal and comfortable mouse for all your gaming and work needs. We offer clean, simple, yet sophisticated templates in which
       anyone is able to access. Furthermore, there is a standalone section for pre-made custom mice, approved by the GAM/r team and the community. Our goal is not to just provide you with a
       mouse; instead, we aim to produce the highest tier mouse for all your needs.</h1>
 
-      <p>
+      <p data-aos="fade-up">
         - GAM/r
       </p>
-
-    </div>
-
-
-
-    <!--Back Button-->
-    <div>
-
-      <i class="fa fa-angle-up"></i>
 
     </div>
 
@@ -176,7 +227,7 @@
 
 
   <!--Footer-->
-  <div class="footer">
+  <div class="index-footer">
 
     <p>Created by</p><h1>DEVision</h1>
 

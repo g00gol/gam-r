@@ -1,0 +1,59 @@
+/*HTML*/
+html {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+/*Body*/
+body {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+
+
+
+
+/*Navigation*/
+.nav {
+  position: fixed;
+  visibility: hidden;
+}
+
+
+
+
+
+/*Responsive Navigation*/
+.res-nav {
+  position: fixed;
+  width: 100%;
+  height: auto;
+}
+
+.res-nav a {
+  position: absolute;
+  float: left;
+}
+
+.res-nav .content {
+  position: fixed;
+  height: 100%;
+  width: 0;
+  background-color: #0d0d0d;
+  z-index: 3;
+}
+
+.res-nav .content a {
+  padding: 1vw;
+}
