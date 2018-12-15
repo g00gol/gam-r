@@ -173,10 +173,19 @@ session_start();
     
       if (isset($_GET['error'])) {
         if ($_GET['error'] == "emptyfields") {
-          echo '<p class="emptyFields">You must fill in all fields!</p>';
+          echo '<p class="error">You must fill in all fields!</p>';
         }
+        
+        else if ($_GET['error'] == "invaliduid") {
+          echo '<p class="error">Invalid Username!</p>';
+        }
+        
         else if ($_GET['error'] == "invalidmailuid") {
-          echo '<p class="invalidMailUid">Invalid E-mail and Username!</p>';
+          echo '<p class="error">Invalid E-mail and Username!</p>';
+        }
+        
+        else if ($_GET['error'] == "passwordcheck") {
+          echo "<p class='error'>Passwords don't match!</p>";
         }
       }
     
@@ -204,6 +213,20 @@ session_start();
       <button type="submit" name="login-submit">Login</button>
       
     </form>
+    
+    <?php
+    
+      if (isset($_GET['error'])) {
+        if ($_GET['error'] == "wrongpwd") {
+          echo '<p class="error">Incorrect Password!</p>';
+        }
+        
+        else if ($_GET['error'] == "nouser") {
+          echo '<p class="error">Incorrect Username!</p>';
+        }
+      }
+    
+    ?>
     
   </div>
   

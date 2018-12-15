@@ -190,6 +190,16 @@ require '../includes/dbh.inc.php';
          
       ?>
       
+      <?php
+    
+        if (isset($_GET['error'])) {
+          if ($_GET['error'] == "emptyfields") {
+            echo '<p class="error">You must fill in all fields!</p>';
+          }
+        }
+    
+      ?>
+      
     </div>
     
   </div>
@@ -213,7 +223,7 @@ require '../includes/dbh.inc.php';
       <input type="text" name="address" placeholder="Address">
       <input type="text" name="city" placeholder="City">
       <input type="text" name="state" placeholder="State">
-      <br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br>
       
       <?php
         
@@ -227,6 +237,8 @@ require '../includes/dbh.inc.php';
       ?>
       
       <button style="margin: 2vw; border: solid 0.5vw #1ac5ce; background-color: #1ac5ce; font-size: 1vw; display: inline; cursor: pointer;" type="submit" name="checkout">Checkout</button>
+      
+      <p>**The order will utilize Pay On Delivery (POD).</p>
       
     </form>
     

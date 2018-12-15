@@ -175,6 +175,14 @@ body {
   cursor: pointer;
 }
 
+.signup .error {
+  position: relative;
+  color: red;
+  font-size: 1vw;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+}
+
+
 
 
 
@@ -227,6 +235,13 @@ body {
   font-size: 1vw;
   font-family: 'Quicksand', bgBold, Helvetica, Arial;
   cursor: pointer;
+}
+
+.login .error {
+  position: relative;
+  color: red;
+  font-size: 1vw;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
 }
 
 
@@ -546,6 +561,7 @@ body {
 .comingSoon {
   position: absolute;
   margin: 10%;
+  margin-bottom: 5%;
   width: 80%;
   height: 70%;
   background-color: white;
@@ -569,7 +585,7 @@ body {
   position: relative;
   width: 25vw;
   height: auto;
-  top: 10%;
+  margin-top: 5%;
 }
 
 
@@ -987,7 +1003,7 @@ body {
   position: relative;
   width: auto;
   height: 10%;
-  top: 2%;
+  margin-top: 2%;
   right: 5%;
 }
 
@@ -1019,6 +1035,13 @@ body {
   color: black;
   font-family: 'Quicksand', bgBold, Helvetica, Arial;
   font-size: 1.5vw;
+}
+
+.shopping-cart .cart .error {
+  padding: 1vw;
+  color: red;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+  font-size: 1vw;
 }
 
 
@@ -1074,6 +1097,8 @@ body {
   border-style: none;
   border-bottom: solid 0.1vw black;
   margin: 2%;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
+  font-size: 1vw;
 }
 
 .checkout form button {
@@ -1085,4 +1110,10 @@ body {
   font-family: 'Quicksand', bgBold, Helvetica, Arial;
   font-size: 0.8vw;
   cursor: pointer;
+}
+
+.checkout form p {
+  color: black;
+  font-size: 1vw;
+  font-family: 'Quicksand', bgBold, Helvetica, Arial;
 }
